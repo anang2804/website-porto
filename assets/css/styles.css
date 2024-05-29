@@ -541,30 +541,42 @@ body.light-theme {
   color :#FF9100
 }
 
-/* Portofolio Styles */
+/* Gaya untuk Bagian Portofolio */
 .portofolio-section {
-  background-color: #6c757d; /* Warna abu-abu yang digunakan di halaman skill */
-  color: #fff; /* Warna teks */
-  padding: 60px 0;
+  background-color: #6c757d; /* Latar belakang abu-abu seperti bagian keterampilan */
+  color: #fff; /* Warna teks umum */
+  padding: 60px 0; /* Padding atas dan bawah */
 }
 
 .portofolio-section h1 {
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Margin bawah untuk heading */
 }
 
-.portofolio-konten .card {
+#portofolio-konten, #portofolio-konten-2 {
+  display: flex;
+  flex-wrap: wrap; /* Memastikan item membungkus pada layar kecil */
+  justify-content: space-between;
+}
+
+#portofolio-konten .card, #portofolio-konten-2 .card {
   border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
   transition: transform 0.3s;
+  margin-bottom: 20px; /* Tambahkan margin bawah untuk card */
 }
 
-.portofolio-konten .card:hover {
-  transform: translateY(-10px);
+#portofolio-konten .card:hover, #portofolio-konten-2 .card:hover {
+  transform: translateY(-10px); /* Efek mengangkat saat hover */
 }
 
-.portofolio-konten img {
-  max-width: 100%;
-  height: auto;
+#portofolio-konten img, #portofolio-konten-2 img {
+  width: 100%; /* Lebar penuh */
+  height: 200px; /* Tinggi tetap */
+  object-fit: cover; /* Potong gambar agar sesuai dengan ukuran */
+}
+
+#portofolio-konten .card-text, #portofolio-konten-2 .card-text {
+  color: #000; /* Ganti dengan warna teks yang Anda inginkan, misalnya hitam */
 }
 
 .btn-custom1 {
@@ -582,6 +594,9 @@ body.light-theme {
   color: white;
   text-decoration: none;
 }
+
+
+
 
 
 
